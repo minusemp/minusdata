@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  </head>
+  
+  
+<body id="myPage">
+  <script>
+  $(document).ready(function(){
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  // Prevent default anchor click behavior
+  event.preventDefault();
+
+  // Store hash
+  var hash = this.hash;
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+    });
+  });
+})
+</script>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="nav-brand" href="#myPage">Designer&Web <br> Developer</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron text-center">
+    <h1>Websites done right.</h1>
+    <p>You can subscribe to stay tunned with our portfolio.</p>
+    <form class="form-inline">
+      <input type="email" class="form-control" size="50" placeholder="Email Address">
+      <button type="button" class="btn btn-danger">Subscribe</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <div class="media-container">
+      <div class="btn-group btn-group-justified">
+        <a href="https://github.com/minusemp" class="btn btn-danger" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/liviu-gheorghe-43647511b?trk=nav_responsive_tab_profile_pic" class="btn btn-danger" target="_blank"><i class="fa fa-linkedin"></i> Linkedin</a>
+        <a href="https://twitter.com/minusEmp" class="btn btn-danger" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+        <a href="https://codepen.io/minusEmp/" class="btn btn-danger"><i class="fa fa-codepen" target="_blank"></i> CodePen</a>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="container-fluid" id="about" data-target="#about">
+    <div class="row">
+      <div class="col-sm-8">
+    <h1>About Me</h1>
+        <h3><em>"My name is <strong>Gheorghe 'minusEmp' Liviu</strong> from Bucharest, Romania. I'm a web developer and designer in the same time. My ambition and motivation determined me to create different websites for small to big businesses. This job/hobby whatever you want to call it, grew up in my heart and became a new joy for me." <cite>- minusEmp</cite></em></h3>
+    <button class="btn btn-default btn-lg" data-target="contact">Get in Touch</button>
+  </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo">
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo"></span> 
+    </div>
+    <div class="col-sm-8">
+    <h1>My Values:</h1>
+    <h4><strong>Mission:</strong> My mission is to create succesful websites and get better at developing. </h4>
+    <p><strong>Vission:</strong> My vision is that one day I can watch my portfolio and see hundreds maybe thousands of succesful websites maybe for people from around the world. </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-center bg-grey" id="portfolio" data-target="#portfolio">
+    <h1>Portfolio</h1>
+    <h4>My Projects.</h4>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <p><strong>Project1</strong></p>
+          <p>Description</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <p><strong>Project2</strong></p>
+          <p>Description2</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="" alt="">
+          <p><strong>Project3</strong></p>
+          <p>Description3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-grey" id="contact" data- target="#contact">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact me and I'll get back to you within 24hours.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Bucharest, Romania</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> minusemp@yahoo.com</p>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span></a>
+    <p>© minusEmp <a href="http://codepen.io/minusEmp/"> Visit </a></p>
+  </footer>
+  
+</body>
